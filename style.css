@@ -85,10 +85,10 @@ nav .nav__logo a span {
 
 header {
   height: 100vh;
-  background-image: url("images/Putra_Ravelyon.png");
-  background-position: 22cm;
+  background-image: url("images/Putra-Ravelyon.png");
+  background-position: 28cm;
   background-repeat: no-repeat;
-  background-size: 35%;
+  background-size: 25%;
   background-color:var(--primary-color);
 }
 
@@ -175,7 +175,7 @@ h4{
 }
 
 .about__image img {
-  max-width: 250px;
+  max-width: 400px;
 }
 
 .about__details {
@@ -189,7 +189,13 @@ footer {
   background-color: var(--primary-color);
 }
 
-.service__grid,
+.service__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
 .project__grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -202,7 +208,7 @@ footer {
   align-items: flex-start;
   gap: 1rem;
   padding: 2rem;
-  background-color: var(--text-dark);
+  background-color: #3798d5;
   border-radius: 40px;
   
 }
@@ -212,10 +218,25 @@ footer {
     margin-left: 42.5%;
 }
 
+.service__card1 {
+  display: grid;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  background-color:#3798d5;
+  border-radius: 40px;
+  
+}
+
+.service__card1 img {
+    width: 25%;
+    margin-left: 38%;
+}
+
 .project__card {
   margin-right: 28%;
   display: grid;
-  place-content: center;
+  /* place-content: center; */
   border-radius: 0px;
 }
 
@@ -227,6 +248,11 @@ footer {
 .project__card:hover img {
   scale: 1.1;
 }
+
+.project__row img {
+  margin-bottom: 19%;
+}
+
 
 .footer__container {
   display: grid;
@@ -300,7 +326,11 @@ footer {
     text-align: left;
   }
 
-  .service__grid,
+  .service__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
   .project__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -311,14 +341,20 @@ footer {
   }
 }
 
+
+
 @media (min-width: 768px) {
   .header__container h1 {
     font-size: 5rem;
     line-height: 5rem;
   }
 
-  .service__grid,
+  .service__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .project__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
